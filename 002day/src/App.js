@@ -1,15 +1,20 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import Context,{ Provider } from './context/Context';
 import Intro from './component/Intro';
 import Mode from './component/Mode';
-import Canlendar from './component/Canlendar';
+import Calendar from './component/Calendar';
 
 function App() {
+    const context = useContext(Context)
+    console.log(context)
     return (
-        <div className="App">
-            <Intro />
-            <Mode />
-            <Canlendar />
-        </div>
+        <Provider value={context}>
+            <div className="App">
+                <Intro />
+                <Mode />
+                <Calendar />
+            </div>
+        </Provider>
     );
 }
 
