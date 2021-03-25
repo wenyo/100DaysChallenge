@@ -1,0 +1,88 @@
+#warp {
+  background: url("./eatbg.jpg") no-repeat fixed center;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  color: #cfcfcf;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  border-top: 1px solid aliceblue;
+  border-bottom: 1.5px solid #949aa0;
+  background-color: #00000000;
+  padding: 5px 10px;
+  color: #cfcfcf;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:active,
+button:focus {
+  outline: none;
+}
+
+#main {
+  width: 100%;
+  margin: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#meal div {
+  margin: 20px 0;
+}
+
+.homepage {
+  justify-content: center;
+}
+
+.homepage #meal {
+  display: none;
+}
+
+.getMeal {
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+#meal {
+  height: 80%;
+  overflow-y: overlay;
+}
+
+h2 {
+  font-size: 26px;
+  margin: 10px 0;
+}
+
+.block {
+  background-color: #0b161cb8;
+  padding: 10px 5px;
+  margin-bottom: 10px;
+}
+
+.article {
+  display: flex;
+  flex-direction: row;
+}
+
+.article div {
+  width: 50%;
+}
+
+.article div img {
+  width: 100%;
+}
+
+.article p {
+  width: 48%;
+  margin: 0 1%;
+}
