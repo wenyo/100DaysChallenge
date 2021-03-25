@@ -1,45 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EAT</title>
-    <link rel="stylesheet" href="./reset.css" />
-    <link rel="stylesheet" href="./style.css" />
-    <script src="./index.js"></script>
-  </head>
-  <body>
-    <div id="warp" class="homepage">
-      <div id="main">
-        <button onclick="getMeal()">GET MEAL</button>
-      </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>EAT</title>
+        <link rel="stylesheet" href="../reset.css" />
+        <link rel="stylesheet" href="./style.css" />
+        <script src="./index.js"></script>
+    </head>
+    <body>
+        <div id="warp" class="homepage">
+            <div id="main">
+                <button onclick="getMeal()">GET MEAL</button>
+            </div>
 
-      <div id="meal" class="block">
-        <h2></h2>
+            <div id="meal">
+                <div id="info">
+                    <h2></h2>
+                    <ul></ul>
+                </div>
 
-        <div class="article">
-          <div>
-            <img src="" alt="" />
-          </div>
-          <p></p>
+                <div class="article">
+                    <p class="block"></p>
+                    <div>
+                        <img src="" alt="" />
+                    </div>
+                </div>
+
+                <div id="doIt">
+                    <div id="video"></div>
+
+                    <div class="ingred block">
+                        <h3>Ingredients</h3>
+                        <ul></ul>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="info">
-          <ul>
-            <li><span>Category</span><span></span></li>
-            <li><span>Area</span><span></span></li>
-            <li><span>Tags</span><span></span></li>
-          </ul>
-        </div>
-
-        <div class="ingred">
-          <h3>Ingredients</h3>
-          <ul></ul>
-        </div>
-
-        <div id="video"></div>
-      </div>
-    </div>
-  </body>
+    </body>
 </html>

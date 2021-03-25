@@ -18,25 +18,25 @@ const getMeal = () => {
 };
 
 const getTitle = (sTitle) => {
-  const mealEl = document.getElementById("meal");
-  mealEl.children[0].innerText = sTitle;
+  const infoEl = document.getElementById("info");
+  infoEl.children[0].innerText = sTitle;
 };
 
 const getArticle = (img, article) => {
   const articleEl = document.querySelector(".article");
-  articleEl.children[0].children[0].src = img;
-  articleEl.children[1].innerText = article;
+  articleEl.children[0].innerText = article;
+  articleEl.children[1].children[0].src = img;
 };
 
 // [category, area, tags]
 const getInfo = (props) => {
-  const infoChild = document.querySelector(".info").children[0];
+  const infoChild = document.getElementById("info").children[1];
   for (const idx in props) {
     if (!props[idx]) continue;
 
-    const li = infoChild.children[idx];
-    const spanEl = li.children[1];
-    spanEl.innerText = props[idx];
+    const vText = props[idx].split(",");
+    const sText = vText.join("</li><li>#")
+    infoChild.innerHTML = `<li>#${sText}</li>`;
   }
 };
 
@@ -60,7 +60,7 @@ const getVideo = (video) => {
   if (!video) return;
   const videoEl = document.getElementById("video");
   videoEl.innerHTML = `
-    <iframe width="420" 
+    <iframe width="100%" 
             height="315"
             src="https://www.youtube.com/embed/${video.slice(-11)}">
     </iframe>
