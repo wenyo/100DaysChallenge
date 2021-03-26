@@ -22,3 +22,5 @@ export const ICON_INFO = [
         component: faTired,
     },
 ];
+
+export const WEEKDAY = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];

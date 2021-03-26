@@ -1,11 +1,17 @@
 import React from 'react';
+import Month from './Month';
 
 class Calendar extends React.Component {
     constructor() {
         super();
     }
+
     render() {
-        return <>Calendar</>;
+        return (
+            <>
+                <Month month={1} />
+            </>
+        );
     }
 }
 
