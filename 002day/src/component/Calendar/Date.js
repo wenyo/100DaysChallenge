@@ -28,7 +28,7 @@ class Date extends React.Component {
     }
 
     getMonthDate() {
-        const date = `${this.context.sNowYear}/${this.state.month }/1`;
+        const date = `${this.context.sNowYear}/${this.state.month}/1`;
         let iDateNum = moment(date).add('1', 'month').subtract('1', 'days').date();
         this.setState({
             iDateNum: iDateNum,
@@ -39,12 +39,11 @@ class Date extends React.Component {
         const { iDay, iDateNum } = this.state;
         return (
             <div>
-                {
-                    Array.from(Array(iDay)).map((x) => {
-                        return <span>0</span>;
-                    })}
+                {Array.from(Array(iDay)).map((x, idx) => {
+                    return <span key={idx}>0</span>;
+                })}
                 {Array.from(Array(iDateNum)).map((x, idx) => {
-                    return <DateItem date={idx + 1} />;
+                    return <DateItem key={idx + 1} date={idx + 1} />;
                 })}
             </div>
         );
