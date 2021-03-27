@@ -9,7 +9,11 @@ class Calendar extends React.Component {
     render() {
         return (
             <>
-                <Month month={1} />
+                {
+                    Array.from(Array(12)).map((x, idx)=>(
+                        <Month month={idx+1} />
+                    ))
+                }
             </>
         );
     }
