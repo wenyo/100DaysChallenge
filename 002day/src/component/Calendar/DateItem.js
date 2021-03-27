@@ -8,13 +8,13 @@ const DateItem = ({ date }) => {
 
     const markMode = () => {
         if (iModeIdx === -1) return;
-        setsClassName(ICON_INFO[iModeIdx].className);
+        setsClassName(ICON_INFO[iModeIdx].className2);
     };
 
     return (
-        <span onClick={markMode} className={sClassName}>
-            {date}
-        </span>
+        <div onClick={markMode} >
+            <span className={`date_item ${sClassName}`}>{date}</span>
+        </div>
     );
 };
 export default DateItem;

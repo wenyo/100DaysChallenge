@@ -3,9 +3,9 @@ import { WEEKDAY } from '../../utils/Info';
 
 const WeekDay = () => {
     return (
-        <div>
+        <div className="week">
             {WEEKDAY.map((day) => (
-                <span key={day}>{day}</span>
+                <div key={day}>{day}</div>
             ))}
         </div>
     );

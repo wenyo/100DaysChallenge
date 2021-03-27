@@ -1,0 +1,43 @@
+#Mode {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    box-shadow: 0 0 5px $color-9;
+    border-radius: 5px;
+    background-color: $color-6;
+    display: flex;
+    flex-direction: row;
+
+    li {
+        padding: 10px;
+        opacity: 0.4;
+        background-color: $color-6;
+        cursor: pointer;
+
+        &.active,
+        &:hover {
+            opacity: 1;
+            background-color: unset;
+        }
+    }
+}
+
+.color-1 {
+    color: $color-1;
+}
+
+.color-2 {
+    color: $color-2;
+}
+
+.color-3 {
+    color: $color-3;
+}
+
+.color-4 {
+    color: $color-4;
+}
+
+.color-5 {
+    color: $color-5;
+}

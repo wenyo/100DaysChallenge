@@ -38,9 +38,9 @@ class Date extends React.Component {
     render() {
         const { iDay, iDateNum } = this.state;
         return (
-            <div>
+            <div className="date">
                 {Array.from(Array(iDay)).map((x, idx) => {
-                    return <span key={idx}>0</span>;
+                    return <div key={idx}></div>;
                 })}
                 {Array.from(Array(iDateNum)).map((x, idx) => {
                     return <DateItem key={idx + 1} date={idx + 1} />;

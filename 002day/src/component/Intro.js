@@ -5,7 +5,7 @@ const Intro = () => {
     const { sNowYear } = useContext(Context);
 
     return (
-        <div className="Intro">
+        <div id="Intro">
             <h1>{sNowYear} Mode Calendar</h1>
             <ul>
                 <li>choese mode first</li>

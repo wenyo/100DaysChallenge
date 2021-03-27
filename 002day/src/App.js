@@ -9,7 +9,7 @@ function App() {
     const context = useContext(Context);
 
     // state
-    const [iModeIdx, setiModeIdx] = useState(-1);
+    const [iModeIdx, setiModeIdx] = useState(0);
     
     const vNewContext = {
         ...context,
@@ -19,7 +19,7 @@ function App() {
 
     return (
         <Provider value={vNewContext}>
-            <div className="App">
+            <div id="App">
                 <Intro />
                 <Mode />
                 <Calendar />

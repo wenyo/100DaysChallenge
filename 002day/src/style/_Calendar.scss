@@ -1,0 +1,74 @@
+#Calendar {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 700px;
+    justify-content: space-between;
+
+    h3 {
+        font-size: 20px;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    & > div {
+        min-width: 200px;
+        width: 30%;
+        margin-bottom: 20px;
+    }
+
+    .week,
+    .date {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+
+        & > div {
+            width: calc(100% / 7);
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+    }
+}
+
+.date_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.5px;
+    width: 27px;
+    height: 27px;
+    border-radius: 27px;
+    box-sizing: border-box;
+    background-color: $color-7;
+    color: $color-6;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.color-bg-1 {
+    color: #dddddd;
+    background-color: $color-1;
+}
+
+.color-bg-2 {
+    color: #dddddd;
+    background-color: $color-2;
+}
+
+.color-bg-3 {
+    color: #dddddd;
+    background-color: $color-3;
+}
+
+.color-bg-4 {
+    color: #dddddd;
+    background-color: $color-4;
+}
+
+.color-bg-5 {
+    color: #dddddd;
+    background-color: $color-5;
+}
