@@ -4,9 +4,6 @@ import { ICON_INFO } from '../../utils/Info';
 import context from '../../context/Context';
 
 class Mode extends React.Component {
-    constructor() {
-        super();
-    }
 
     static contextType = context;
 

@@ -21,7 +21,7 @@ class Date extends React.Component {
 
     getFirstWeekDay() {
         const date = `${this.context.sNowYear}/${this.state.month}/1`;
-        const iDay = moment(date).day();
+        const iDay = moment(date, "YYYY/MM/DD").day();
         this.setState({
             iDay: iDay,
         });
@@ -29,7 +29,7 @@ class Date extends React.Component {
 
     getMonthDate() {
         const date = `${this.context.sNowYear}/${this.state.month}/1`;
-        let iDateNum = moment(date).add('1', 'month').subtract('1', 'days').date();
+        let iDateNum = moment(date, "YYYY/MM/DD").add('1', 'month').subtract('1', 'days').date();
         this.setState({
             iDateNum: iDateNum,
         });
