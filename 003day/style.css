@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+}
+
+#social {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    font-size: 25px;
+}
+
+a{
+    color:#0b49a7;
+    text-decoration: none;
+}
+
+a:hover{
+    color:#3586ff;
+}
