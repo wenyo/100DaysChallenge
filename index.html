@@ -37,19 +37,21 @@
             console.log(document.querySelector('#chanllenge').children[1].innerHTML);
 
             window.onload = () => {
-                fetch('./info.json').then((res) => {
-                    console.log(res);
-                    let sInfo = '';
-                    for (const key in res.chanllenge) {
-                        const { name, url } = res.chanllenge[key];
-                        sInfo += `
+                fetch('./info.json')
+                    .then((res) => res.json())
+                    .then((res) => {
+                        console.log(res);
+                        let sInfo = '';
+                        for (const key in res.chanllenge) {
+                            const { name, url } = res.chanllenge[key];
+                            sInfo += `
                         <tr data-key="${key}">
                             <td><a src="${url}">${name}</a></td>
                         </tr>
                     `;
-                    }
-                    document.querySelector('#chanllenge').children[1].innerHTML = sInfo;
-                });
+                        }
+                        document.querySelector('#chanllenge').children[1].innerHTML = sInfo;
+                    });
             };
         </script>
     </body>
