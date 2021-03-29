@@ -1,8 +1,13 @@
 #Intro {
     margin-bottom: 20px;
-    padding-bottom: 20px;
+    padding: 10px;
     border-bottom: 1px solid $color-7;
-    display: inline-block;
+    width: 100vw;
+    box-sizing: border-box;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
 
     h1 {
         font-size: 30px;
