@@ -9,7 +9,7 @@
     </head>
     <body>
         <div class="warp">
-            <h1>#100DaysCHALLENGE</h1>
+            <h1>#100DAYSCHALLENGE</h1>
             <p>I hope I can keep it up.</p>
 
             <div class="intro">
@@ -18,11 +18,11 @@
                 </div>
             </div>
 
-            <table id="chanllenge">
+            <table id="challenge">
                 <thead>
                     <tr>
                         <th>Day</th>
-                        <th>chanllenge</th>
+                        <th>challenge</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -34,7 +34,7 @@
         </div>
 
         <script>
-            console.log(document.querySelector('#chanllenge').children[1].innerHTML);
+            console.log(document.querySelector('#challenge').children[1].innerHTML);
 
             window.onload = () => {
                 fetch('./info.json')
@@ -42,15 +42,15 @@
                     .then((res) => {
                         console.log(res);
                         let sInfo = '';
-                        for (const key in res.chanllenge) {
-                            const { name, url } = res.chanllenge[key];
+                        for (const key in res.challenge) {
+                            const { name, url } = res.challenge[key];
                             sInfo += `
                         <tr data-key="${key}">
                             <td><a src="${url}">${name}</a></td>
                         </tr>
                     `;
                         }
-                        document.querySelector('#chanllenge').children[1].innerHTML = sInfo;
+                        document.querySelector('#challenge').children[1].innerHTML = sInfo;
                     });
             };
         </script>
