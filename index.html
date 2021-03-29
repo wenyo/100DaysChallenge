@@ -43,10 +43,10 @@
                         console.log(res);
                         let sInfo = '';
                         for (const key in res.challenge) {
-                            const { name, url, id } = res.challenge[key];
+                            const { name, url, number } = res.challenge[key];
                             sInfo += `
                         <tr data-key="${key}">
-                            <td>${id}</td>
+                            <td>${number}</td>
                             <td><a href="${url}">${name}</a></td>
                         </tr>
                     `;

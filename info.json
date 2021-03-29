@@ -1,17 +1,17 @@
 {
     "challenge":[
         {
-            "number": "01",
+            "number": "#001",
             "name": "Random Meal Generator",
             "url" : "./001day/index.html"
         },
         {
-            "number": "02",
+            "number": "#002",
             "name": "Mood Calendar",
             "url" : "https://codesandbox.io/s/awesome-yonath-8ctz5"
         },
         {
-            "number": "03",
+            "number": "#003",
             "name": "Double Noise Flow Field",
             "url" : ""
         }
