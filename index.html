@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="warp">
+            <h1>#100DaysCHALLENGE</h1>
+            <p>I hope I can keep it up.</p>
+
+            <div class="intro">
+                <div class="img">
+                    <img src="./IMG_0604.JPG" alt="machi" />
+                </div>
+            </div>
+
+            <table id="chanllenge">
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>chanllenge</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <script>
+            console.log(document.querySelector('#chanllenge').children[1].innerHTML);
+
+            window.onload = () => {
+                fetch('./info.json').then((res) => {
+                    console.log(res);
+                    let sInfo = '';
+                    for (const key in res.chanllenge) {
+                        const { name, url } = res.chanllenge[key];
+                        sInfo += `
+                        <tr data-key="${key}">
+                            <td><a src="${url}">${name}</a></td>
+                        </tr>
+                    `;
+                    }
+                    document.querySelector('#chanllenge').children[1].innerHTML = sInfo;
+                });
+            };
+        </script>
+    </body>
+</html>
