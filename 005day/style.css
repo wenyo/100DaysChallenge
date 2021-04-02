@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#wrap {
+    width: 100vw;
+    height: 100vh;
+    background-color: #d1c0a1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+}
+
+.img {
+    width: 300px;
+    height: 320px;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px #96866b9d;
+    position: relative;
+}
+
+.img img {
+    width: 200%;
+    margin-top: -120px;
+    margin-left: -180px;
+}
+
+.img div {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    position: absolute;
+    bottom: 0;
+    background-color: #f7deb5af;
+}
+
+.follow {
+    display: inline-block;
+    padding: 8px 10px;
+    background-color: #c5902f;
+    border-radius: 0 0 5px 5px;
+    margin: 0 5px;
+}
+
+.follow a {
+    color: #f3e1bc;
+    text-decoration: none;
+    font-weight: bold;
+}
