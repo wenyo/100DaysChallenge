@@ -1,5 +1,5 @@
 const API_ALL = 'https://pokeapi.co/api/v2/pokemon';
-const PAGE_NUMBER = 20;
+const PAGE_NUMBER = 15;
 let TOTAL_PAGES = 20;
 const colors = {
     fire: '#FDDFDF',
@@ -36,9 +36,8 @@ const getOnePageItem = async (page) => {
 
 const getAllPokeAPI = async (pageNumber) => {
     const offset = (pageNumber - 1) * PAGE_NUMBER;
-    const limit = pageNumber * PAGE_NUMBER;
     let data = {};
-    await fetch(`${API_ALL}?offset=${offset}&limit=${limit}`)
+    await fetch(`${API_ALL}?offset=${offset}&limit=${PAGE_NUMBER}`)
         .then((res) => res.json())
         .then((res) => (data = res));
 
