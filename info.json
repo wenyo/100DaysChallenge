@@ -24,6 +24,11 @@
             "number": "#005",
             "name": "User Profile",
             "url": "https://wenyo.github.io/100DaysChallenge/005day/index.html"
+        },
+        {
+            "number": "#006",
+            "name": "Pokedex",
+            "url": "https://wenyo.github.io/100DaysChallenge/006day/index.html"
         }
     ]
 }
