@@ -18,12 +18,30 @@ const colors = {
     normal: '#F5F5F5',
 };
 
-const getOnePageItem = async (page) => {
+const toggleAlert = () => {
+    const alert = document.getElementById('alert');
+    const bShow = alert.classList.contains('active');
+    if (bShow) {
+        alert.classList.remove('active');
+    } else {
+        alert.classList.add('active');
+    }
+};
+
+const getUrl = (page) => {
+    const offset = (page - 1) * PAGE_NUMBER;
+    const url = `${API_ALL}?offset=${offset}&limit=${PAGE_NUMBER}`;
+    return url;
+};
+
+const getItemByUrl = async (url, page) => {
+    toggleAlert();
+
     const content = document.getElementById('content');
     let data = {};
     let orderData = [];
 
-    await getAllPokeAPI(page).then((res) => (data = res));
+    await getAllPokeAPI(url).then((res) => (data = res));
 
     await getPokeInfo(data.results).then((res) => (orderData = res));
 
@@ -32,12 +50,21 @@ const getOnePageItem = async (page) => {
         sCardList += buildCard(pokeInfo);
     }
     content.innerHTML = sCardList;
+
+    const { count, next, previous } = data;
+    buildPageNumber(count, page, next, previous);
+
+    toggleAlert();
 };
 
-const getAllPokeAPI = async (pageNumber) => {
-    const offset = (pageNumber - 1) * PAGE_NUMBER;
+const getOnePageItem = (page) => {
+    const url = getUrl(page);
+    getItemByUrl(url, page);
+};
+
+const getAllPokeAPI = async (url) => {
     let data = {};
-    await fetch(`${API_ALL}?offset=${offset}&limit=${PAGE_NUMBER}`)
+    await fetch(url)
         .then((res) => res.json())
         .then((res) => (data = res));
 
@@ -87,6 +114,34 @@ const buildCard = (pokeInfo) => {
             </div>
         `;
     return sCardEl;
+};
+
+const buildPageNumber = (iPokeCount, iNowPage, next, previous) => {
+    const pageNumberEl = document.getElementById('page-number');
+    const iTotalPage = Math.round(iPokeCount / PAGE_NUMBER);
+
+    let iStartPage = 0;
+    if (iNowPage - 5 <= 0) {
+        iStartPage = 1;
+    } else if (iNowPage + 2 > iTotalPage) {
+        iStartPage = iTotalPage - 4;
+    } else {
+        iStartPage = iNowPage - 2;
+    }
+
+    let sPageList = '';
+    for (let iPage = iStartPage; iPage < iStartPage + 5; iPage++) {
+        const className = iPage === iNowPage ? 'active' : '';
+        sPageList += `<span class="${className}" onclick="getOnePageItem(${iPage})">${iPage}</span>`;
+    }
+
+    if (previous) {
+        sPageList = `<span onclick="getItemByUrl('${previous}', ${iNowPage - 1})"><</span>${sPageList}`;
+    }
+    if (next) {
+        sPageList = `${sPageList}<span onclick="getItemByUrl('${next}', ${iNowPage + 1})">></span>`;
+    }
+    pageNumberEl.innerHTML = sPageList;
 };
 
 window.onload = () => {

@@ -6,16 +6,21 @@ body {
 
 #wrap {
     background-color: #e7e5e5;
+    min-height: 100vh;
 }
 
 nav {
     width: 100%;
     height: 50px;
     box-sizing: border-box;
-    background-color: gray;
+    background-color: #ffffff;
     position: fixed;
     top: 0;
     left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #5f5f5f;
 }
 
 main {
@@ -42,6 +47,13 @@ main {
     border-radius: 20px;
 }
 
+@media screen and (max-width: 900px) {
+    .card {
+        width: 31%;
+        margin: 1%;
+    }
+}
+
 .img-container {
     width: 100%;
     border-radius: 50%;
@@ -50,7 +62,6 @@ main {
 
 .img-container img {
     width: 100%;
-
 }
 
 .classfication {
@@ -62,4 +73,53 @@ main {
     box-shadow: 1px 1px 0 #aaaaaab2;
     margin-right: 10px;
     padding: 2px 5px;
+}
+
+#page-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+#page-number span {
+    background-color: #ffffffb2;
+    padding: 3px 8px;
+    margin: 0 3px;
+    border-radius: 2px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+#page-number span:hover,
+#page-number .active {
+    color: #fff;
+    background-color: #b4b4b4;
+    box-shadow: 0 0 5px #cfcfcf;
+}
+
+#alert {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #7a7a7a38;
+    justify-content: center;
+    align-items: center;
+}
+
+#alert.active {
+    display: flex;
+}
+
+#alert .msg {
+    background-color: #fff;
+    width: 200px;
+    background-color: #fffefc;
+    width: 200px;
+    padding: 20px 10px;
+    text-align: center;
+    border-radius: 5px;
 }
