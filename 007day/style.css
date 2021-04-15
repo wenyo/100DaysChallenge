@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Holtwood+One+SC|Lora&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #eee;
+    font-family: 'Holtwood One SC';
+}
+
+#wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#wrap > div {
+    width: 80vw;
+    height: 35vw;
+}
+
+#wrap p {
+    font-size: 50px;
+}
+
+#wrap p > span:first-child {
+    margin-left: -20px;
+}
+
+#wrap > div:first-child,
+#wrap > div:last-child {
+    height: 15vw;
+}
+
+#wrap > div:nth-child(n) {
+    background: linear-gradient(90deg, #c0c0c0 0%, #c0c0c0 50%, #fff 50%, #fff 100%);
+}
+
+#wrap > div:nth-child(n) > p > span:first-child {
+    color: #fff;
+}
+
+#wrap > div:nth-child(2n) {
+    background: linear-gradient(90deg, #fff 0%, #fff 50%, #c0c0c0 50%, #c0c0c0 100%);
+}
+
+.title {
+    text-align: center;
+}
