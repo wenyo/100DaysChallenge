@@ -206,3 +206,34 @@ body {
         width: 150%;
     }
 }
+
+@media (max-width: 690px) {
+    .title,
+    .name {
+        font-size: 30px;
+    }
+
+    .vice-title{
+        font-size: 20px;
+    }
+
+    .img-content img, .img-content .left-80{
+        height: 130%;
+        width: auto;
+    }
+
+    .img-content .left-80 {
+        margin-left: -110%;
+    }
+}
+
+@media (max-width: 450px) {
+    .img-content  .left-30{
+        margin-left: -100%;
+
+    }
+
+    .img-content .left-80 {
+        margin-left: -180%;
+    }
+}
